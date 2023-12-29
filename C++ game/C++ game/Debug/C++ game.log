@@ -1,3 +1,3 @@
 ﻿  win32_platform.cpp
-D:\VS CODE\project-c++\C++ game\C++ game\win32_platform.cpp(20,5): warning C4007: 'WinMain': 必須為 '__stdcall'
-  C++ game.vcxproj -> D:\VS CODE\project-c++\C++ game\Debug\C++ game.exe
+D:\VS CODE\project-c++\Easy-Ping-Pong-Game\C++ game\C++ game\win32_platform.cpp(37,5): warning C4007: 'WinMain': 必須為 '__stdcall'
+  C++ game.vcxproj -> D:\VS CODE\project-c++\Easy-Ping-Pong-Game\C++ game\Debug\C++ game.exe

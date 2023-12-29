@@ -5,17 +5,19 @@ https://learn.microsoft.com/zh-tw/windows/win32/winmsg/window-class-styles µøµ¡Ã
 https://learn.microsoft.com/zh-tw/windows/win32/api/winuser/nc-winuser-wndproc (winuser.h) WNDPROC ¦^©I¨ç¦¡
 https://learn.microsoft.com/en-us/windows/win32/api/winuser/nf-winuser-createwindowa CreateWindowA macro (winuser.h)
 https://learn.microsoft.com/en-us/windows/win32/winmsg/window-styles Window Styles
-
+https://www.wongwonggoods.com/all-posts/cplusplus/cpp-image-process/c_opencv/cpp-opencv-rect/ ¡iOpenCV¡jc++ OpenCV ¡V cv::Rect ¯x§Î¥Îªk»P¬ÛÃö¥\¯à¨ç¼Æ sample code (¤º§t½d¨Òµ{¦¡½X)
 https://zhidao.baidu.com/question/26366187.html c++¤¤ªº¨ç?«e­±¥[?LRESULT¬O¤°¤\·N«ä°Ú¡H
+https://edisonx.pixnet.net/blog/post/36615535 ªì¾ÇªÌªº windows.h
+https://learn.microsoft.com/zh-tw/windows/win32/api/wingdi/ns-wingdi-bitmapinfo BITMAPINFO µ²ºc (wingdi.h)
+
 ¦b·L?vc´£¨Ñªº?¤å¥ó¤¤¦³©w?¡G
+	¦bwinnt.h¤¤typedef long LONG;
+	¦bwindef.h¤¤typedef LONG LRESULT;
 
-¦bwinnt.h¤¤typedef long LONG;
-¦bwindef.h¤¤typedef LONG LRESULT;
+	©Ò¥HLRESULT´N¬Olong,¤]´N¬O?¾ã§Î
 
-©Ò¥HLRESULT´N¬Olong,¤]´N¬O?¾ã§Î
-
-¤§©Ò¥H¨ú¦W?LRESULT,L=>long
-resultªí¥Ü?ªG¡A?©ú??¨ç?ªºªð¦^­È¬O¬Y??ªG¡C
+	¤§©Ò¥H¨ú¦W?LRESULT,L=>long
+	resultªí¥Ü?ªG¡A?©ú??¨ç?ªºªð¦^­È¬O¬Y??ªG¡C
 
 
 ©Ò¦³ªº Windows µøµ¡µ{¦¡ªº°õ¦æ¶i¤JÂI¬O WinMain ³o­Ó¨ç¦¡:
@@ -61,3 +63,19 @@ Window Styles:
 	  [in, optional]  hInstance,
 	  [in, optional]  lpParam
 	);
+
+Rect rect: «Å§i¯x§Î // 14
+	
+typedef struct tagBITMAPINFOHEADER {
+			DWORD biSize;
+			LONG  biWidth;
+			LONG  biHeight;
+			WORD  biPlanes;
+			WORD  biBitCount;
+			DWORD biCompression;
+			DWORD biSizeImage;
+			LONG  biXPelsPerMeter;
+			LONG  biYPelsPerMeter;
+			DWORD biClrUsed;
+			DWORD biClrImportant;
+		} BITMAPINFOHEADER, * LPBITMAPINFOHEADER, * PBITMAPINFOHEADER;
