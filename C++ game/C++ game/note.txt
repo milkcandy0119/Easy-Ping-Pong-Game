@@ -1,0 +1,63 @@
+https://learn.microsoft.com/zh-tw/windows/win32/api/winbase/nf-winbase-winmain winMain 函式 (winbase.h)
+https://learn.microsoft.com/zh-tw/windows/win32/api/winuser/ns-winuser-wndclassa WNDCLASSA 結構 (winuser.h)
+https://learn.microsoft.com/zh-tw/windows/win32/api/winuser/ns-winuser-wndclassa 透過"windows.h" 建立 C++視窗軟體
+https://learn.microsoft.com/zh-tw/windows/win32/winmsg/window-class-styles 視窗類別樣式 (winuser.h)
+https://learn.microsoft.com/zh-tw/windows/win32/api/winuser/nc-winuser-wndproc (winuser.h) WNDPROC 回呼函式
+https://learn.microsoft.com/en-us/windows/win32/api/winuser/nf-winuser-createwindowa CreateWindowA macro (winuser.h)
+https://learn.microsoft.com/en-us/windows/win32/winmsg/window-styles Window Styles
+
+https://zhidao.baidu.com/question/26366187.html c++中的函?前面加?LRESULT是什么意思啊？
+在微?vc提供的?文件中有定?：
+
+在winnt.h中typedef long LONG;
+在windef.h中typedef LONG LRESULT;
+
+所以LRESULT就是long,也就是?整形
+
+之所以取名?LRESULT,L=>long
+result表示?果，?明??函?的返回值是某??果。
+
+
+所有的 Windows 視窗程式的執行進入點是 WinMain 這個函式:
+
+	int WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nShowCmd){}
+
+		資料型態 HINSTANCE 是一個 32-bit 的 unsigned int 。
+
+		HINSTANCE hinstance:
+			參數 hinstance 從作業系統接收一個代碼（handle），
+			此代碼在作業系統代表這個目前正執行的程式。
+
+		HINSTANCE hprevinstance:
+			hprevinstance 是此程式前一個開啟且正執行的代
+			碼。Win32 系統已經不用這一個參數，而且把它永遠設
+			成 NULL (0) 。
+
+		LPSTR lpcmdline:
+			接收指令列參數
+
+		int ncmdshow:
+			ncmdshow 是此程式開啟時的視窗顯示方式。
+
+				SW_HIDE 隱藏視窗
+				SW_MAXIMIZE 視窗放大至整個螢幕
+				SW_MINIMIZE 視窗縮至最小
+				SW_SHOW 顯示並啟動視窗
+				SW_SHOWNORMAL 顯示正常大小的視窗並啟
+
+
+Window Styles:
+
+	void CreateWindowA(
+	  [in, optional]  lpClassName,
+	  [in, optional]  lpWindowName,
+	  [in]            dwStyle,
+	  [in]            x,
+	  [in]            y,
+	  [in]            nWidth,
+	  [in]            nHeight,
+	  [in, optional]  hWndParent,
+	  [in, optional]  hMenu,
+	  [in, optional]  hInstance,
+	  [in, optional]  lpParam
+	);
